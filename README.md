@@ -1,5 +1,4 @@
 # 💫 About Me:
-🎮 I game whenever I get the chance – helps keep the creativity flowing!<br>
 🔭 Currently working on 3D web experiences using <strong>Three.js</strong> and <strong>Next.js</strong>
 
 # 💻 Tech Stack:
