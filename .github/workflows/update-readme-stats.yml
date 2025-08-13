@@ -1,0 +1,24 @@
+name: Update README Stats
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'  # Runs every 12 hours
+  workflow_dispatch:        # Allows manual trigger
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Generate GitHub Stats SVG
+        uses: anuraghazra/github-readme-stats@latest
+        with:
+          token: ${{ secrets.GH_README_STATS_TOKEN }}
+          count_private: true
+          show_icons: true
+          include_all_commits: true
+          cache_seconds: 1800
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_README_STATS_TOKEN }}
